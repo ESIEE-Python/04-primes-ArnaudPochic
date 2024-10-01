@@ -1,18 +1,34 @@
-from math import sqrt
+"""
+Auteur : Arnaud POCHIC
 
-#### Fonction secondaire
-
+"""
 
 def isprime(p):
+    """
+    Retourne True ou False en fonction de si p est premier ou pas.
 
-    # votre code ici
+    Args:
+        num: valeur entiere positive
 
-    pass
+    Returns:
+        True or False
+    """
+    premier = True
+    if p in (0,1):
+        return False
+    for i in range(2,int(p**0.5+1)):
+        if p%i == 0:
+            premier = False
+            break
+    return premier
 
 #### Fonction principale
 
 
 def main():
+    """
+    fonction principale qui appelle isprime()
+    """
 
     # vos appels à la fonction secondaire ici
 
